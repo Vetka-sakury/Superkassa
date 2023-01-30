@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Service
 public class ExampleService {
 
@@ -20,7 +22,6 @@ public class ExampleService {
         exampleRepository.update(newJson, id);
         return findById(id);
     }
-
 
     public ExampleObject findById(Integer id) {
         ExampleObject exampleObject = null;

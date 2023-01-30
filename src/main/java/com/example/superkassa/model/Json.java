@@ -13,9 +13,9 @@ public class Json implements Serializable {
         this.current = current;
     }
 
-    private Integer current;
+    private volatile Integer current;
 
-    public int getCurrent() {
+    public Integer getCurrent() {
         return current;
     }
 
