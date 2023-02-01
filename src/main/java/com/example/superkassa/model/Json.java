@@ -13,7 +13,7 @@ public class Json implements Serializable {
         this.current = current;
     }
 
-    private volatile Integer current;
+    private Integer current;
 
     public Integer getCurrent() {
         return current;

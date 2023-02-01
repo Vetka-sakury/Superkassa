@@ -18,7 +18,7 @@ public class ExampleRestController {
     private ExampleService exampleService;
 
     @PostMapping(value = "/modify", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public synchronized OutputTo update(@RequestBody InputTo inputObject) {
+    public OutputTo update(@RequestBody InputTo inputObject) {
         try {
             return OutputUtil.asTo(exampleService.increase(inputObject.getId(), inputObject.getAdd()));
         } catch (Exception e) {
