@@ -6,6 +6,7 @@ import org.hibernate.type.SqlTypes;
 
 @Entity
 @Table(name = "sk_example_table")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class ExampleObject {
 
     @Id
